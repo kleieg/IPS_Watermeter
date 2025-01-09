@@ -14,8 +14,8 @@ class MyWatermeter extends IPSModule
 
         // variables
         $this->RegisterVariableFloat("Value", "Value", "Water_2");
-        $this->RegisterVariableString("Error", "Error", "Error);
-        $this->RegisterVariableInteger("Time", "Time", '~UnixTimestamp');
+        $this->RegisterVariableString("Error", "Error", "Error");
+        $this->RegisterVariableInteger("Time", "Time", "~UnixTimestamp");
 
     }
 

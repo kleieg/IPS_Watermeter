@@ -1,6 +1,6 @@
 <?php
 
-class ShellyBluRuuvi extends IPSModule
+class MyWatermeter extends IPSModule
 {
     public function Create()
     {

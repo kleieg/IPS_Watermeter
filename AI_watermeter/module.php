@@ -13,9 +13,9 @@ class ShellyBluRuuvi extends IPSModule
         $this->RegisterPropertyString('Address', '');
 
         // variables
-        $this->RegisterVariableFloat("Temperature", "Temperature", "~Temperature");
-        $this->RegisterVariableFloat("Humidity", "Humidity", "~Humidity.F");
-        $this->RegisterVariableFloat("Battery", "Battery", '~Volt');
+        $this->RegisterVariableFloat("Value", "Value", "Water_2");
+        $this->RegisterVariableString("Error", "Error", "Error);
+        $this->RegisterVariableInteger("Time", "Time", '~UnixTimestamp');
 
     }
 
@@ -36,14 +36,14 @@ class ShellyBluRuuvi extends IPSModule
         $Buffer = json_decode($JSONString, true);
         $Payload = json_decode($Buffer['Payload'], true);
 
-        if(isset($Payload['temp'])) {
-            $this->SetValue('Temperature', $Payload['temp']);
+        if(isset($Payload['value'])) {
+            $this->SetValue('Value', $Payload['value']);
         }
-        if(isset($Payload['humidity'])) {
-            $this->SetValue('Humidity', $Payload['humidity']);
+        if(isset($Payload['error'])) {
+            $this->SetValue('Error', $Payload['error']);
         }
-        if(isset($Payload['batt'])) {
-            $this->SetValue('Battery', $Payload['batt']);
+        if(isset($Payload['timestamp'])) {
+            $this->SetValue('Time', strtotime($Payload['timestamp']));
         }
     }
 

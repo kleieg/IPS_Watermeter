@@ -1,12 +1,12 @@
 {
-    "id": "{AF498D50-6CB4-3849-FDB4-F4AD05609428}",
-    "name": "ShellyBlue",
+    "id": "{{2EAF5714-51E4-B2B5-2E6E-715F240BBEFC}}",
+    "name": "AI_watermeter",
     "author": "Egbert Kleinhans",
-    "url": "https://github.com/kleieg/IPS_ShellyBlue",
+    "url": "https://github.com/kleieg/IPS_Watermeter",
     "compatibility": {
         "version": "7.0"
     },
     "version": "1.1",
-    "build":52,
-    "date": 26
+    "build":10,
+    "date": 10
 }

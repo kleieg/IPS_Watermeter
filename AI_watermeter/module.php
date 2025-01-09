@@ -37,7 +37,9 @@ class MyWatermeter extends IPSModule
         $Payload = json_decode($Buffer['Payload'], true);
 
         if(isset($Payload['value'])) {
-            $this->SetValue('Value', $Payload['value']);
+            if(strlen($Payload['value']) > 0) {
+                $this->SetValue('Value', $Payload['value']);
+            }
         }
         if(isset($Payload['error'])) {
             $this->SetValue('Error', $Payload['error']);
